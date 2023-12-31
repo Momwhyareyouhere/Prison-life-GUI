@@ -29,7 +29,7 @@ local Window = Rayfield:CreateWindow({
 local Tab = Window:CreateTab("Tab Example", nil) -- Title, Image
 
 local Button = Tab:CreateButton({
-   Name = "Kill all",
+   Name = "Kill_all",
    Callback = function()
    spawn(function()
 while wait(0.1) do

@@ -69,24 +69,11 @@ end)
 local Button = Tab:CreateButton({
    Name = "Button Example",
    Callback = function()
-   _G.loop = true
- while _G.loop == true do wait(0.5)
-    workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS:findFirstChild('M9', true).ITEMPICKUP)
-    workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS:findFirstChild('Remington 870', true).ITEMPICKUP)
-    workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS:findFirstChild('AK-47', true).ITEMPICKUP)
-        for i, v in next, debug.getregistry() do 
-            if type(v) == "table" then 
-                if v.Bullets then 
-                v.AutoFire = true
-                v.FireRate = 0
-                v.Bullets = 50
-                v.Range = math.huge
-                v.MaxAmmo = math.huge
-                v.CurrentAmmo = math.huge
-                v.StoredAmmo = math.huge
-            end
-        end
-    end
+   -- mix owl hub weapon mod and silent aim with this for the best exploiting experience
+for i,v in pairs(Workspace.Prison_ITEMS.giver:GetChildren()) do
+ 
+lol = Workspace.Remote.ItemHandler:InvokeServer(v.ITEMPICKUP)
+print(lol)
 end
    end,
 })

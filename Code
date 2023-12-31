@@ -26,6 +26,21 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
+Rayfield:Notify({
+   Title = "Thanks for using the Script!",
+   Content = "This script is in Beta",
+   Duration = 6.5,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Okay!",
+         Callback = function()
+         print("The user tapped Okay!")
+      end
+   },
+},
+})
+
 local Tab = Window:CreateTab("Main", nil) -- Title, Image
 
 local Button = Tab:CreateButton({

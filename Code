@@ -57,6 +57,7 @@ local Button = MainTab:CreateButton({
    Name = "Click Teleport",
    Callback = function()
    mouse = game.Players.LocalPlayer:GetMouse()
+   loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/BTools.txt"))()
 tool = Instance.new("Tool")
 tool.RequiresHandle = false
 tool.Name = "Click Teleport"

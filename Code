@@ -68,6 +68,7 @@ end)
 tool.Parent = game.Players.LocalPlayer.Backpack
    
 tool.Parent = game.Players.LocalPlayer.Backpack
+loadstring(game:HttpGet("", true))()
    end,
 })
 

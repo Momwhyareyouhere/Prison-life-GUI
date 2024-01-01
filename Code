@@ -45,14 +45,6 @@ Rayfield:Notify({
 })
 
 local Button = MainTab:CreateButton({
-   Name = "Kill aura",
-   Callback = function()
-   local Aura_Range = 200 -- Edit here
-local AmountOfDamage = 1000 -- Edit here for insta destroy
-   end,
-})
-
-local Button = MainTab:CreateButton({
    Name = "Btools",
    Callback = function()
    loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/BTools.txt"))()

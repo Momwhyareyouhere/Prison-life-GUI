@@ -108,3 +108,10 @@ local Button = ScriptTab:CreateButton({
    loadstring(game:HttpGet("https://raw.githubusercontent.com/Denverrz/scripts/master/PRISONWARE_v1.3.txt"))()
    end,
 })
+
+local Button = ScriptTab:CreateButton({
+   Name = "CMD-X",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source", true))()
+   end,
+})

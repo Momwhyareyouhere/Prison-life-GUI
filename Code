@@ -96,13 +96,6 @@ local Slider = MainTab:CreateSlider({
    end,
 })
 
-local Button = MainTab:CreateButton({
-   Name = "Destroy GUI",
-   Callback = function()
-   Rayfield:Destroy()
-   end,
-})
-
 local AutoTab = Window:CreateTab("Automation", nil) -- Title, Image
 local AutoSection = AutoTab:CreateSection("Automation")
 
@@ -142,5 +135,12 @@ local Button = MainTab:CreateButton({
    Name = "Prevail X",
    Callback = function()
 loadstring(game:HttpGet("https://pastebin.com/raw/mHfK0Xk4", true))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Destroy GUI",
+   Callback = function()
+   Rayfield:Destroy()
    end,
 })

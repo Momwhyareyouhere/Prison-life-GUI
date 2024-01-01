@@ -1,2 +1,1 @@
-# Made by TEST122456654
-# Run the script in Prison Life
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Momwhyareyouhere/Prison-life-GUI/main/Code'))()

@@ -66,10 +66,3 @@ end
 end)
    end,
 })
-local Button = Tab:CreateButton({
-   Name = "Teleport GUI",
-   Callback = function()
-   
-end
-   end,
-})

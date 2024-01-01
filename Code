@@ -130,18 +130,17 @@ end)
    end,
 })
 
-local ScriptTab = Window:CreateTab("Scripts", nil) -- Title, Image
-local ScriptSection = ScriptTab:CreateSection("Scripts")
-local Button = ScriptTab:CreateButton({
-   Name = "Prisonware",
-   Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/Denverrz/scripts/master/PRISONWARE_v1.3.txt"))()
-   end,
-})
 
-local Button = ScriptTab:CreateButton({
+local Button = MainTab:CreateButton({
    Name = "CMD-X",
    Callback = function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source", true))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Prevail X",
+   Callback = function()
+loadstring(game:HttpGet("https://pastebin.com/raw/mHfK0Xk4", true))()
    end,
 })

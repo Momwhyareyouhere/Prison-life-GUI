@@ -44,7 +44,7 @@ Rayfield:Notify({
 local Tab = Window:CreateTab("Main", nil) -- Title, Image
 
 local Button = Tab:CreateButton({
-   Name = "Kill all (it can't be undone)",
+   Name = "Kill all(it can't be undone)",
    Callback = function()
    spawn(function()
 while wait(0.1) do

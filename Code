@@ -76,33 +76,29 @@ local Button = MainTab:CreateButton({
 })
 
 local Button = MainTab:CreateButton({
+   Name = "Click Teleport",
+   Callback = function()
+   mouse = game.Players.LocalPlayer:GetMouse()
+tool = Instance.new("Tool")
+tool.RequiresHandle = false
+tool.Name = "Click Teleport"
+tool.Activated:connect(function()
+local pos = mouse.Hit+Vector3.new(0,2.5,0)
+pos = CFrame.new(pos.X,pos.Y,pos.Z)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+end)
+tool.Parent = game.Players.LocalPlayer.Backpack
+   end,
+})
+
+local Button = MainTab:CreateButton({
    Name = "Destroy GUI",
    Callback = function()
    Rayfield:Destroy()
    end,
 })
 
-local Button = MainTab:CreateButton({
-   Name = "Click Teleport",
-   Callback = function()
-   -- Define the part where players will click to teleport
-local teleportPart = script.Parent
 
--- Define the destination where players will teleport
-local destination = Vector3.new(10, 3, 20)  -- Change these coordinates to your desired destination
-
--- Function to teleport players upon clicking the part
-local function onPartClicked()
-    local player = game.Players:GetPlayerFromCharacter(workspace.CurrentCamera)
-    if player then
-        player.Character.HumanoidRootPart.CFrame = CFrame.new(destination)
-    end
-end
-
--- Event listener for when the part is clicked
-teleportPart.MouseClick:Connect(onPartClicked)
-   end,
-})
 
 local ScriptTab = Window:CreateTab("Scripts", nil) -- Title, Image
 local ScriptSection = ScriptTab:CreateSection("Scripts")

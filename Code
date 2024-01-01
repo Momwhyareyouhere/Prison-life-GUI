@@ -31,7 +31,7 @@ local MainSection = MainTab:CreateSection("Main")
 
 Rayfield:Notify({
    Title = "Thanks for using the script",
-   Content = "the script is still in beta",
+   Content = "The script is still in beta",
    Duration = 5,
    Image = 4483362458,
    Actions = { -- Notification Buttons

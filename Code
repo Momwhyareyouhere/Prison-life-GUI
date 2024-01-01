@@ -72,8 +72,8 @@ tool.Parent = game.Players.LocalPlayer.Backpack
    end,
 })
 
-local Slider = Tab:CreateSlider({
-   Name = "Slider Example",
+local Slider = MainTab:CreateSlider({
+   Name = "Walkspeed",
    Range = {0, 100},
    Increment = 10,
    Suffix = "Speed",

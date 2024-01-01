@@ -77,7 +77,7 @@ local Button = MainTab:CreateButton({
 })
 
 local AutoTab = Window:CreateTab("Automation", nil) -- Title, Image
-local AutoSection = Tab:CreateSection("Automation")
+local AutoSection = AutoTab:CreateSection("Automation")
 
 local Button = AutoTab:CreateButton({
    Name = "Auto Kill all(it can't be undone)",
@@ -103,7 +103,7 @@ end)
    end,
 })
 
-local Button = Tab:CreateButton({
+local Button = AutoTab:CreateButton({
    Name = "Auto Arrest",
    Callback = function()
    for i, v in pairs(game.Teams.Criminals:GetPlayers()) do

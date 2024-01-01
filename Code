@@ -57,7 +57,6 @@ local Button = MainTab:CreateButton({
    Name = "Click Teleport",
    Callback = function()
    mouse = game.Players.LocalPlayer:GetMouse()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/Momwhyareyouhere/Prison-life-GUI/main/Notification"))()
 tool = Instance.new("Tool")
 tool.RequiresHandle = false
 tool.Name = "Click Teleport"

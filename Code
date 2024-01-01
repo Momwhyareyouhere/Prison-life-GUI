@@ -82,6 +82,28 @@ local Button = MainTab:CreateButton({
    end,
 })
 
+local Button = MainTab:CreateButton({
+   Name = "Click Teleport",
+   Callback = function()
+   -- Define the part where players will click to teleport
+local teleportPart = script.Parent
+
+-- Define the destination where players will teleport
+local destination = Vector3.new(10, 3, 20)  -- Change these coordinates to your desired destination
+
+-- Function to teleport players upon clicking the part
+local function onPartClicked()
+    local player = game.Players:GetPlayerFromCharacter(workspace.CurrentCamera)
+    if player then
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(destination)
+    end
+end
+
+-- Event listener for when the part is clicked
+teleportPart.MouseClick:Connect(onPartClicked)
+   end,
+})
+
 local ScriptTab = Window:CreateTab("Scripts", nil) -- Title, Image
 local ScriptSection = ScriptTab:CreateSection("Scripts")
 local Button = ScriptTab:CreateButton({

@@ -44,29 +44,7 @@ Rayfield:Notify({
 },
 })
 
-local Button = MainTab:CreateButton({
-   Name = "Kill all",
-   Callback = function()
-   spawn(function()
-while wait(0.1) do
-for i, v in next, game:GetService("Players"):GetChildren() do
-pcall(function()
-if v~= game:GetService("Players").LocalPlayer and not v.Character:FindFirstChildOfClass("ForceField") and v.Character.Humanoid.Health > 0 then
-while v.Character:WaitForChild("Humanoid").Health > 0 do
-wait();
-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame;
-for x, c in next, game:GetService("Players"):GetChildren() do
-if c ~= game:GetService("Players").LocalPlayer then game.ReplicatedStorage.meleeEvent:FireServer(c) end
-end
-end
-end
-end)
-wait()
-end
-end
-end)
-   end,
-})
+
 
 local Button = MainTab:CreateButton({
    Name = "Btools",
@@ -98,7 +76,49 @@ local Button = MainTab:CreateButton({
    end,
 })
 
+local AutoTab = Window:CreateTab("Automation", nil) -- Title, Image
+local AutoSection = Tab:CreateSection("Automation")
 
+local Button = AutoTab:CreateButton({
+   Name = "Auto Kill all(it can't be undone)",
+   Callback = function()
+   spawn(function()
+while wait(0.1) do
+for i, v in next, game:GetService("Players"):GetChildren() do
+pcall(function()
+if v~= game:GetService("Players").LocalPlayer and not v.Character:FindFirstChildOfClass("ForceField") and v.Character.Humanoid.Health > 0 then
+while v.Character:WaitForChild("Humanoid").Health > 0 do
+wait();
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame;
+for x, c in next, game:GetService("Players"):GetChildren() do
+if c ~= game:GetService("Players").LocalPlayer then game.ReplicatedStorage.meleeEvent:FireServer(c) end
+end
+end
+end
+end)
+wait()
+end
+end
+end)
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Auto Arrest",
+   Callback = function()
+   for i, v in pairs(game.Teams.Criminals:GetPlayers()) do
+		if v.Name ~= game.Players.LocalPlayer.Name then
+			local inp = 10
+			repeat
+				wait()
+				inp = inp-1
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, 1)
+                		game.Workspace.Remote.arrest:InvokeServer(v.Character.HumanoidRootPart)
+			until inp == 0
+		end
+	end
+   end,
+})
 
 local ScriptTab = Window:CreateTab("Scripts", nil) -- Title, Image
 local ScriptSection = ScriptTab:CreateSection("Scripts")

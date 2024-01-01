@@ -43,7 +43,7 @@ Rayfield:Notify({
 
 local Tab = Window:CreateTab("Main", nil) -- Title, Image
 
-local Button = Tab:CreateButton({
+local Button1 = MainTab:CreateButton({
    Name = "Kill all(it can't be undone)",
    Callback = function()
    spawn(function()
@@ -67,11 +67,9 @@ end)
    end,
 })
 
-local Input = MainTab:CreateInput({
-   Name = "Walkspeed",
-   PlaceholderText = "1-500",
-   RemoveTextAfterFocusLost = true,
-   Callback = function(Text)
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Text)
+local Button2 = MainTab:CreateButton({
+   Name = "Btools",
+   Callback = function()
+   -- The function that takes place when the button is pressed
    end,
 })

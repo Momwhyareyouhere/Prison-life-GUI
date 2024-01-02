@@ -144,3 +144,13 @@ local Button = MainTab:CreateButton({
    Rayfield:Destroy()
    end,
 })
+
+local FunTab = Window:CreateTab("Funny things", nil) -- Title, Image
+local FunSection = FunTab:CreateSection("Funny things")
+
+local Button = FunTab:CreateButton({
+   Name = "Gravity 0 (it can't be undone)",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})

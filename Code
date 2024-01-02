@@ -151,6 +151,6 @@ local FunSection = FunTab:CreateSection("Funny things")
 local Button = FunTab:CreateButton({
    Name = "Gravity 0 (it can't be undone)",
    Callback = function()
-   -- The function that takes place when the button is pressed
+   game.Workspace.Gravity = 0
    end,
 })

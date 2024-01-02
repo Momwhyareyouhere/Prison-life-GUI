@@ -154,3 +154,10 @@ local Button = FunTab:CreateButton({
    game.Workspace.Gravity = 0
    end,
 })
+
+local Button = FunTab:CreateButton({
+   Name = "Gravity 1",
+   Callback = function()
+   game.Workspace.Gravity = 1
+   end,
+})

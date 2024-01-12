@@ -129,7 +129,7 @@ local Button = MainTab:CreateButton({
 })
 
 local TeleportTab = Window:CreateTab("Teleportations", nil) -- Title, Image
-local TeleportSection = Tab:CreateSection("Place")
+local TeleportSection = TeleportTab:CreateSection("Place")
 
 local TeleportButton = TeleportTab:CreateButton({
    Name = "Button Example",

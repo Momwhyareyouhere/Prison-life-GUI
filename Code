@@ -132,7 +132,7 @@ local TeleportTab = Window:CreateTab("Teleportations", nil) -- Title, Image
 local TeleportSection = TeleportTab:CreateSection("Place")
 
 local TeleportButton = TeleportTab:CreateButton({
-   Name = "Button Example",
+   Name = "Criminal Base",
    Callback = function()
    -- Get the Players service
 local Players = game:GetService("Players")
@@ -146,6 +146,24 @@ end
 -- Teleport the player to the specified coordinates
 teleportToCoordinate(Players.LocalPlayer, -909, 94, 2068)
 print("Teleported to coordinates: -909, 94, 2068")
+   end,
+})
+
+local TeleportButton = TeleportTab:CreateButton({
+   Name = "Gas Station",
+   Callback = function()
+   -- Get the Players service
+local Players = game:GetService("Players")
+
+-- Function to teleport the player to a specific coordinate
+local function teleportToCoordinate(player, x, y, z)
+    local newPosition = Vector3.new(x, y, z)
+    player.Character:SetPrimaryPartCFrame(CFrame.new(newPosition))
+end
+
+-- Teleport the player to the specified coordinates
+teleportToCoordinate(Players.LocalPlayer, -547, 54, 1693)
+print("Teleported to coordinates: -547, 54, 1693")
    end,
 })
 

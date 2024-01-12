@@ -72,30 +72,6 @@ tool.Parent = game.Players.LocalPlayer.Backpack
    end,
 })
 
-local Slider = MainTab:CreateSlider({
-   Name = "Walkspeed",
-   Range = {0, 100},
-   Increment = 10,
-   Suffix = "Speed",
-   CurrentValue = 16,
-   Flag = "Speed", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Value)
-   end,
-})
-
-local Slider = MainTab:CreateSlider({
-   Name = "JumpPower",
-   Range = {0, 100},
-   Increment = 10,
-   Suffix = "JumpPower",
-   CurrentValue = 50,
-   Flag = "JumpPower", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   game.Players.LocalPlayer.Character.Humanoid.JumpPower = (Value)
-   end,
-})
-
 local AutoTab = Window:CreateTab("Automation", nil) -- Title, Image
 local AutoSection = AutoTab:CreateSection("Automation")
 

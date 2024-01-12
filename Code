@@ -167,6 +167,133 @@ print("Teleported to coordinates: -547, 54, 1693")
    end,
 })
 
+local TeleportButton = TeleportTab:CreateButton({
+   Name = "Gate",
+   Callback = function()
+   -- Get the Players service
+local Players = game:GetService("Players")
+
+-- Function to teleport the player to a specific coordinate
+local function teleportToCoordinate(player, x, y, z)
+    local newPosition = Vector3.new(x, y, z)
+    player.Character:SetPrimaryPartCFrame(CFrame.new(newPosition))
+end
+
+-- Teleport the player to the specified coordinates
+teleportToCoordinate(Players.LocalPlayer, 448, 98, 2218)
+print("Teleported to coordinates: 448 98 2218")
+   end,
+})
+
+local TeleportButton = TeleportTab:CreateButton({
+   Name = "Tower",
+   Callback = function()
+   -- Get the Players service
+local Players = game:GetService("Players")
+
+-- Function to teleport the player to a specific coordinate
+local function teleportToCoordinate(player, x, y, z)
+    local newPosition = Vector3.new(x, y, z)
+    player.Character:SetPrimaryPartCFrame(CFrame.new(newPosition))
+end
+
+-- Teleport the player to the specified coordinates
+teleportToCoordinate(Players.LocalPlayer, 823, 130, 2587)
+print("Teleported to coordinates: 823, 130, 2587")
+   end,
+})
+
+local TeleportButton = TeleportTab:CreateButton({
+   Name = "Roof",
+   Callback = function()
+   -- Get the Players service
+local Players = game:GetService("Players")
+
+-- Function to teleport the player to a specific coordinate
+local function teleportToCoordinate(player, x, y, z)
+    local newPosition = Vector3.new(x, y, z)
+    player.Character:SetPrimaryPartCFrame(CFrame.new(newPosition))
+end
+
+-- Teleport the player to the specified coordinates
+teleportToCoordinate(Players.LocalPlayer, 829, 119, 2342)
+print("Teleported to coordinates: 829, 119, 2342")
+   end,
+})
+
+local TeleportButton = TeleportTab:CreateButton({
+   Name = "Lunch",
+   Callback = function()
+   -- Get the Players service
+local Players = game:GetService("Players")
+
+-- Function to teleport the player to a specific coordinate
+local function teleportToCoordinate(player, x, y, z)
+    local newPosition = Vector3.new(x, y, z)
+    player.Character:SetPrimaryPartCFrame(CFrame.new(newPosition))
+end
+
+-- Teleport the player to the specified coordinates
+teleportToCoordinate(Players.LocalPlayer, 911, 100, 2232)
+print("Teleported to coordinates: 911, 100, 2232")
+   end,
+})
+
+local TeleportButton = TeleportTab:CreateButton({
+   Name = "Cell",
+   Callback = function()
+   -- Get the Players service
+local Players = game:GetService("Players")
+
+-- Function to teleport the player to a specific coordinate
+local function teleportToCoordinate(player, x, y, z)
+    local newPosition = Vector3.new(x, y, z)
+    player.Character:SetPrimaryPartCFrame(CFrame.new(newPosition))
+end
+
+-- Teleport the player to the specified coordinates
+teleportToCoordinate(Players.LocalPlayer, 919, 100, 2445)
+print("Teleported to coordinates: 919, 100, 2445")
+   end,
+})
+
+local TeleportButton = TeleportTab:CreateButton({
+   Name = "Yard",
+   Callback = function()
+   -- Get the Players service
+local Players = game:GetService("Players")
+
+-- Function to teleport the player to a specific coordinate
+local function teleportToCoordinate(player, x, y, z)
+    local newPosition = Vector3.new(x, y, z)
+    player.Character:SetPrimaryPartCFrame(CFrame.new(newPosition))
+end
+
+-- Teleport the player to the specified coordinates
+teleportToCoordinate(Players.LocalPlayer, 750, 98, 2497)
+print("Teleported to coordinates: 750, 98, 2497")
+   end,
+})
+
+local TeleportButton = TeleportTab:CreateButton({
+   Name = "Armory",
+   Callback = function()
+   -- Get the Players service
+local Players = game:GetService("Players")
+
+-- Function to teleport the player to a specific coordinate
+local function teleportToCoordinate(player, x, y, z)
+    local newPosition = Vector3.new(x, y, z)
+    player.Character:SetPrimaryPartCFrame(CFrame.new(newPosition))
+end
+
+-- Teleport the player to the specified coordinates
+teleportToCoordinate(Players.LocalPlayer, 840, 101, 2316)
+print("Teleported to coordinates: 840, 101, 2316")
+   end,
+})
+
+
 local FunTab = Window:CreateTab("Funny things", nil) -- Title, Image
 local FunSection = FunTab:CreateSection("Funny things")
 
@@ -176,6 +303,7 @@ local Button = FunTab:CreateButton({
    game.Workspace.Gravity = 0
    end,
 })
+
 
 local Button = FunTab:CreateButton({
    Name = "Gravity 1",
